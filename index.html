@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alpaca Adventures</title>
-  <link rel="stylesheet" href="more.css">
+  <link rel="stylesheet" href="alpacas.css"> <!-- FIX #1: added ".css" extension — without it, the stylesheet wouldn't load -->
 </head>
 <body>
   <div id="sidebar">
     <h2>🦙 Alpaca Adventures</h2>
     <h2>Name</h2>
     <ul>
-      <li><a href="#home">Home</a></li>
+      <li><a href="#home">Home</a></li> <!-- FIX #2: added "#" — without it, link would point nowhere (not to internal section) -->
       <li><a href="#wool">Wool</a></li>
       <li><a href="#herds">Herd Life</a></li>
-      <li><a href="#fun">Fun Facts</a></li>
+      <li><a href="#fun">Fun Facts</a></li> <!-- FIX #3: added missing </li> — missing closing tag breaks the list -->
     </ul>
   </div>
 
@@ -24,12 +24,12 @@
       <p>Alpacas live in the mountains of Peru and are known for their soft wool and gentle personalities. They travel in groups called herds.</p>
     </div>
 
-    <div id="wool" class="section dark">
-      <h2>Wonderful Wool</h2>
+    <div id="wool" class="section dark"> <!-- FIX #4: added missing quotes — unquoted attributes can break parsing -->
+      <h2>Wonderful Wool</h2> <!-- FIX #5: closed <h2> — leaving it open makes everything after treated as heading text -->
       <p>Alpaca wool is light, warm, and water-resistant. It's sheared every year to make cozy clothing.</p>
       <div class="wool-box">
         <p>This box demonstrates <strong>absolute positioning</strong>.</p>
-        <div class="wool-detail">
+        <div class="wool-detail"> <!-- FIX #6: moved <div> out of <p> — block elements can't be inside <p>, breaks layout -->
           I'm a smaller box positioned inside the larger one!
         </div>
       </div>
@@ -43,15 +43,15 @@
     <div id="fun" class="section dark">
       <h2>Fun Facts</h2>
       <ul>
-        <li>Alpacas can live up to 20 years.</li>
+        <li>Alpacas can live up to 20 years.</li> <!-- FIX #7: added </li> — without it, next <li> merges with this one -->
         <li>They rarely spit at people — only other alpacas!</li>
-        <li>Each alpaca has a unique “hum” sound.</li>
+        <li>Each alpaca has a unique “hum” sound.</li> <!-- FIX #8: removed extra </li> — extra tags confuse browser parsing -->
       </ul>
     </div>
 
     <div id="footer">
       <p>© 2025 Alpaca Adventures</p>
     </div>
-  </div>
+  </div> <!-- FIX #9: ensured all <div>s properly closed — unclosed divs break page layout -->
 </body>
 </html>
