@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alpaca Adventures</title>
-  <link rel="stylesheet" href="more.css"> <!-- FIX 1: added missing .css extension -->
+  <link rel="stylesheet" href="more.css"> <!-- added missing .css extension, browser wont apply styles, isnt getting "told" there is a css file -->
 </head>
 <body>
   <div id="sidebar">
     <h2>🦙 Alpaca Adventures</h2>
     <h2>Name</h2>
     <ul>
-      <li><a href="#home">Home</a></li> <!-- FIX 2: added # so link scrolls to section -->
+      <li><a href="#home">Home</a></li> <!-- added # so link scrolls to section, without it, it would look for a seperate file called home instead of creating a home section -->
       <li><a href="#wool">Wool</a></li>
       <li><a href="#herds">Herd Life</a></li>
-      <li><a href="#fun">Fun Facts</a></li> <!-- FIX 3: closed </li> -->
+      <li><a href="#fun">Fun Facts</a></li> <!-- closed </li> browers will try to "guess" where it should end and that often creates layout issues-->
     </ul>
   </div>
 
@@ -25,17 +25,17 @@
         Alpacas live in the mountains of Peru and are known for their soft wool and gentle personalities. 
         They travel in groups called herds.
       </p>
-    </div> <!-- FIX 4: closed missing </div> for home section -->
+    </div> <!-- closed missing </div> for home section, without this the code will treat the next div tag as it was inside of this div tag which would mess up the CSS code -->
 
-    <div id="wool" class="section dark"> <!-- FIX 5: added quotes around attributes -->
-      <h2>Wonderful Wool</h2> <!-- FIX 6: closed </h2> -->
+    <div id="wool" class="section dark"> <!-- added quotes around attributes without it, it would look for a file named wool instead of creating a wool section  -->
+      <h2>Wonderful Wool</h2> <!-- closed </h2> browser would try and guess where it ends, does not go well for formatting -->
       <p>
         Alpaca wool is light, warm, and water-resistant. It's sheared every year to make cozy clothing.
       </p>
       <div class="wool-box">
         <p>This box demonstrates <strong>absolute positioning</strong>.</p>
         <div class="wool-detail">
-          <p>I'm a smaller box positioned inside the larger one!</p> <!-- FIX 7: moved <p> inside correctly -->
+          <p>I'm a smaller box positioned inside the larger one!</p> <!-- moved <p> inside correctly, it would count the div tag as inside the <p> which would make it meaningless other than some text on your screen -->
         </div>
       </div>
     </div>
@@ -51,9 +51,9 @@
     <div id="fun" class="section dark">
       <h2>Fun Facts</h2>
       <ul>
-        <li>Alpacas can live up to 20 years.</li> <!-- FIX 8: closed <li> -->
+        <li>Alpacas can live up to 20 years.</li> <!-- closed <li>, closing the list so the browser doesnt have to guess -->
         <li>They rarely spit at people — only other alpacas!</li>
-        <li>Each alpaca has a unique “hum” sound.</li> <!-- FIX 9: removed double </li> -->
+        <li>Each alpaca has a unique “hum” sound.</li> <!-- removed double </li> this is invalid code and will cause errors like layout issues along the way -->
       </ul>
     </div>
 
