@@ -2,11 +2,11 @@ body {
   font-family: "Trebuchet MS", sans-serif;
   margin: 0;
   color: #3b2b0a;
-} /* closed missing brace } */
+} /* closed missing brace }, everything after the missing brace may be ignored/part of the body tag */
 
 #sidebar {
   position: fixed;
-  top: 0; /* replaced "yes" with valid value 0 */
+  top: 0; /* replaced "yes" with valid value 0 , "yes" is not a valid valid value which will make the top get ignored and will result in formatting errors*/
   left: 0;
   width: 220px;
   height: 100%;
@@ -16,7 +16,7 @@ body {
 }
 
 #sidebar h2 {
-  color: white; /* replaced invalid 'what' with 'white' */
+  color: white; /* replaced invalid 'what' with 'white', what isnt a colour */
   text-align: center;
 }
 
@@ -41,12 +41,12 @@ body {
 #content {
   margin-left: 250px;
   padding: 40px;
-  background-color: #fdf9f4; /* added missing # before color */
+  background-color: #fdf9f4; /* added missing # before color, browser ignores the colour if its either missing a # or an invalid colour, e.g "what" */
 }
 
 .section {
-  padding: 50px; /* added px */
-  margin-bottom: 50px; /* added missing semicolon */
+  padding: 50px; /* added px, browser ignores this if it does not have units */
+  margin-bottom: 50px; /* added missing semicolon, semicolon to tell the browser that this is complete and everything after is a seperate command */
   border-radius: 10px;
 }
 
@@ -54,13 +54,13 @@ body {
   background-color: #fff8e6;
 }
 
-.dark { /* fixed typo 'dork' → 'dark' */
+.dark { /* fixed typo 'dork' --> 'dark', it is written as dark in html so in order for the two files to communicate properly, they have to be named the same thing, if it was dork in html, it would be fine.  */
   background-color: #e7cba9;
   color: #3b2b0a;
 }
 
 .wool-box {
-  position: relative; /* added missing colon */
+  position: relative; /* added missing colon, without the colon the browser would think that relative was part of the command and not a value*/
   background-color: #f3e0b6;
   padding: 30px;
   margin-top: 25px;
@@ -68,7 +68,7 @@ body {
 }
 
 .wool-detail {
-  position: absolute; /* added missing brace + colon */
+  position: absolute; /* added missing brace + colon, none of the styles get applied as theres no value because of the missing colon, and everything does not work because there was no brace to tell the brower you are starting a section */
   bottom: 10px;
   right: 10px;
   background-color: #d4a373;
