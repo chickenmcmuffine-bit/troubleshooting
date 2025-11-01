@@ -2,40 +2,84 @@ body {
   font-family: "Trebuchet MS", sans-serif;
   margin: 0;
   color: #3b2b0a;
-} /* FIX #10: added missing closing brace — without it, all following CSS wouldn't load */
+}
 
-#sidebar { /* FIX #11: changed from .sidebar to #sidebar — wrong selector meant sidebar wasn't styled */
+#sidebar { /* 16️⃣ fixed selector and syntax */
   position: fixed;
-  top: 0; /* FIX #12: replaced invalid "yes" — invalid value disables the property entirely */
+  top: 0;
   left: 0;
   width: 220px;
   height: 100%;
   background-color: #d8b382;
   padding: 20px;
-  box-shadow: 3px 0 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 0 8px rgba(0,0,0,0.2);
 }
 
 #sidebar h2 {
-  color: white; /* FIX #13: replaced "what" with "white" — invalid color keyword causes CSS rule to be ignored */
+  color: white;
   text-align: center;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidebar li {
+  margin: 15px 0;
+}
+
+#sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+#sidebar a:hover {
+  text-decoration: underline;
 }
 
 #content {
   margin-left: 250px;
   padding: 40px;
-  background-color: #fdf9f4; /* FIX #14: added missing "#" — without it, "fdf9f4" isn't recognized as a color */
+  background-color: #fdf9f4;
 }
 
 .section {
-  padding: 50px; /* FIX #15: added missing "px" — invalid unit means property ignored */
+  padding: 50px;
   margin-bottom: 50px;
   border-radius: 10px;
 }
 
+.light {
+  background-color: #fff8e6;
+}
+
+.dark { /* fixed typo .dork */
+  background-color: #e7cba9;
+  color: #3b2b0a;
+}
+
 .wool-box {
-  position: relative; /* FIX #16: added missing colon — without ":", property invalid and positioning fails */
+  position: relative; /* fixed syntax */
   background-color: #f3e0b6;
   padding: 30px;
   margin-top: 25px;
   border-radius: 8px;
+}
+
+.wool-detail {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #d4a373;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #d8b382;
+  color: white;
 }
