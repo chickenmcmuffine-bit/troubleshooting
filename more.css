@@ -1,125 +1,85 @@
-/* Reset box sizing for more predictable layout */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Trebuchet MS", sans-serif;
   margin: 0;
   color: #3b2b0a;
-  background-color: #f6f0ea;
-  line-height: 1.45;
-}
+} /* FIX 1: closed missing brace } */
 
-/* SIDEBAR - fixed so it stays visible while scrolling */
 #sidebar {
   position: fixed;
-  top: 0;
+  top: 0; /* FIX 2: replaced "yes" with valid value 0 */
   left: 0;
   width: 220px;
-  height: 100vh;
+  height: 100%;
   background-color: #d8b382;
-  padding: 28px 18px;
-  box-shadow: 3px 0 8px rgba(0, 0, 0, 0.12);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 20px; /* FIX 3: removed stray control character */
+  box-shadow: 3px 0 8px rgba(0, 0, 0, 0.2);
 }
 
 #sidebar h2 {
-  color: white;
-  margin: 0 0 18px;
-  font-size: 18px;
+  color: white; /* FIX 4: replaced invalid 'what' with 'white' */
   text-align: center;
-}
-
-#sidebar nav {
-  width: 100%;
 }
 
 #sidebar ul {
   list-style: none;
   padding: 0;
-  margin: 0;
-  width: 100%;
 }
 
 #sidebar li {
-  margin: 12px 0;
-}
+  margin: 15px 0;
+} /* FIX 5: moved selector outside ul braces */
 
 #sidebar a {
   color: white;
   text-decoration: none;
-  display: block;
-  padding: 6px 8px;
-  border-radius: 6px;
 }
 
-#sidebar a:hover,
-#sidebar a:focus {
-  text-decoration: none;
-  background: rgba(255,255,255,0.07);
-}
+#sidebar a:hover {
+  text-decoration: underline;
+} /* FIX 6: un-nested hover block properly */
 
-/* MAIN CONTENT - leave space for fixed sidebar */
 #content {
-  margin-left: 250px; /* leaves room for the 220px sidebar + padding */
+  margin-left: 250px;
   padding: 40px;
-  min-height: 100vh;
+  background-color: #fdf9f4; /* FIX 7: added missing # before color */
 }
 
-/* Section card styles */
 .section {
-  padding: 40px;
-  margin-bottom: 30px;
+  padding: 50px; /* FIX 8: added px */
+  margin-bottom: 50px; /* FIX 9: added missing semicolon */
   border-radius: 10px;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.02) inset;
 }
 
 .light {
   background-color: #fff8e6;
 }
 
-.dark {
+.dark { /* FIX 10: fixed typo 'dork' → 'dark' */
   background-color: #e7cba9;
   color: #3b2b0a;
 }
 
-/* Wool box demonstrating relative + absolute */
 .wool-box {
-  position: relative; /* the absolute child will position relative to this */
+  position: relative; /* FIX 11: added missing colon */
   background-color: #f3e0b6;
-  padding: 24px;
-  margin-top: 18px;
+  padding: 30px;
+  margin-top: 25px;
   border-radius: 8px;
-  min-height: 80px;
 }
 
-.wool-box p {
-  margin: 0 0 28px 0;
-}
-
-/* small panel positioned in corner of wool-box */
 .wool-detail {
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
+  position: absolute; /* FIX 12: added missing brace + colon */
+  bottom: 10px;
+  right: 10px;
   background-color: #d4a373;
   color: white;
-  padding: 10px 12px;
-  border-radius: 6px;
-  font-size: 14px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-/* Footer */
 #footer {
   text-align: center;
-  padding: 18px;
+  padding: 20px;
   background-color: #d8b382;
   color: white;
-  border-radius: 6px;
-  margin-top: 20px;
 }
