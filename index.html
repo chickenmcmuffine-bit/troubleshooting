@@ -1,70 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alpaca Adventures</title>
-  <!-- make sure the CSS file name matches -->
-  <link rel="stylesheet" href="more.css" />
+  <link rel="stylesheet" href="alpacas.css"> <!-- FIX 1: added missing .css extension -->
 </head>
 <body>
   <div id="sidebar">
     <h2>🦙 Alpaca Adventures</h2>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#wool">Wool</a></li>
-        <li><a href="#herds">Herd Life</a></li>
-        <li><a href="#fun">Fun Facts</a></li>
-      </ul>
-    </nav>
+    <h2>Name</h2>
+    <ul>
+      <li><a href="#home">Home</a></li> <!-- FIX 2: added # so link scrolls to section -->
+      <li><a href="#wool">Wool</a></li>
+      <li><a href="#herds">Herd Life</a></li>
+      <li><a href="#fun">Fun Facts</a></li> <!-- FIX 3: closed </li> -->
+    </ul>
   </div>
 
-  <main id="content">
-    <section id="home" class="section light">
+  <div id="content">
+    <div id="home" class="section light">
       <h1>Welcome to Alpaca Adventures</h1>
       <p>
-        Alpacas live in the mountains of Peru and are known for their soft wool and gentle
-        personalities. They travel in groups called herds.
+        Alpacas live in the mountains of Peru and are known for their soft wool and gentle personalities. 
+        They travel in groups called herds.
       </p>
-    </section>
+    </div> <!-- FIX 4: closed missing </div> for home section -->
 
-    <section id="wool" class="section dark">
-      <h2>Wonderful Wool</h2>
+    <div id="wool" class="section dark"> <!-- FIX 5: added quotes around attributes -->
+      <h2>Wonderful Wool</h2> <!-- FIX 6: closed </h2> -->
       <p>
-        Alpaca wool is light, warm, and water-resistant. It's sheared every year to make cozy
-        clothing.
+        Alpaca wool is light, warm, and water-resistant. It's sheared every year to make cozy clothing.
       </p>
-
       <div class="wool-box">
         <p>This box demonstrates <strong>absolute positioning</strong>.</p>
-
         <div class="wool-detail">
-          I'm a smaller box positioned inside the larger one!
+          <p>I'm a smaller box positioned inside the larger one!</p> <!-- FIX 7: moved <p> inside correctly -->
         </div>
       </div>
-    </section>
+    </div>
 
-    <section id="herds" class="section light">
+    <div id="herds" class="section light">
       <h2>The Herd Life</h2>
       <p>
-        Alpacas are social animals and hum to each other to communicate. They also have a leader
-        that helps keep order in the group.
+        Alpacas are social animals and hum to each other to communicate. 
+        They also have a leader that helps keep order in the group.
       </p>
-    </section>
+    </div>
 
-    <section id="fun" class="section dark">
+    <div id="fun" class="section dark">
       <h2>Fun Facts</h2>
       <ul>
-        <li>Alpacas can live up to 20 years.</li>
+        <li>Alpacas can live up to 20 years.</li> <!-- FIX 8: closed <li> -->
         <li>They rarely spit at people — only other alpacas!</li>
-        <li>Each alpaca has a unique “hum” sound.</li>
+        <li>Each alpaca has a unique “hum” sound.</li> <!-- FIX 9: removed double </li> -->
       </ul>
-    </section>
+    </div>
 
-    <footer id="footer">
+    <div id="footer">
       <p>© 2025 Alpaca Adventures</p>
-    </footer>
-  </main>
+    </div>
+  </div>
 </body>
 </html>
