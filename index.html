@@ -1,57 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alpaca Adventures</title>
-<link rel="stylesheet" href="more.css"> <!-- 1️⃣ fixed file name -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alpaca Adventures</title>
+  <!-- make sure the CSS file name matches -->
+  <link rel="stylesheet" href="more.css" />
 </head>
 <body>
-<div id="sidebar"> <!-- 2️⃣ ID matches CSS -->
-<h2>🦙 Alpaca Adventures</h2>
-<ul> <!-- 3️⃣ removed extra Name heading -->
-<li><a href="#home">Home</a></li> <!-- 4️⃣ fixed href link -->
-<li><a href="#wool">Wool</a></li> <!-- 5️⃣ fixed href -->
-<li><a href="#herds">Herd Life</a></li> <!-- 6️⃣ fixed href -->
-<li><a href="#fun">Fun Facts</a></li> <!-- 7️⃣ fixed missing </li> -->
-</ul>
-</div>
+  <div id="sidebar">
+    <h2>🦙 Alpaca Adventures</h2>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#wool">Wool</a></li>
+        <li><a href="#herds">Herd Life</a></li>
+        <li><a href="#fun">Fun Facts</a></li>
+      </ul>
+    </nav>
+  </div>
 
-<div id="content"> <!-- 8️⃣ fixed missing closing div tag later -->
-<div id="home" class="section light">
-<h1>Welcome to Alpaca Adventures</h1>
-<p>Alpacas live in the mountains of Peru and are known for their soft wool and gentle
-personalities. They travel in groups called herds.</p>
-</div> <!-- 9️⃣ added closing div for home section -->
+  <main id="content">
+    <section id="home" class="section light">
+      <h1>Welcome to Alpaca Adventures</h1>
+      <p>
+        Alpacas live in the mountains of Peru and are known for their soft wool and gentle
+        personalities. They travel in groups called herds.
+      </p>
+    </section>
 
-<div id="wool" class="section dark"> <!-- 🔟 corrected missing quotes -->
-<h2>Wonderful Wool</h2> <!-- 11️⃣ fixed missing </h2> -->
-<p>Alpaca wool is light, warm, and water-resistant. It's sheared every year to make cozy clothing.</p>
-<div class="wool-box">
-<p>This box demonstrates <strong>absolute positioning</strong>.</p>
-<div class="wool-detail"> <!-- 12️⃣ moved div outside <p> -->
-I'm a smaller box positioned inside the larger one!
-</div>
-</div>
-</div>
+    <section id="wool" class="section dark">
+      <h2>Wonderful Wool</h2>
+      <p>
+        Alpaca wool is light, warm, and water-resistant. It's sheared every year to make cozy
+        clothing.
+      </p>
 
-<div id="herds" class="section light">
-<h2>The Herd Life</h2>
-<p>Alpacas are social animals and hum to each other to communicate. They also have a leader that helps keep order in the group.</p>
-</div>
+      <div class="wool-box">
+        <p>This box demonstrates <strong>absolute positioning</strong>.</p>
 
-<div id="fun" class="section dark">
-<h2>Fun Facts</h2>
-<ul>
-<li>Alpacas can live up to 20 years.</li> <!-- 13️⃣ fixed list tags -->
-<li>They rarely spit at people — only other alpacas!</li>
-<li>Each alpaca has a unique “hum” sound.</li>
-</ul>
-</div>
+        <div class="wool-detail">
+          I'm a smaller box positioned inside the larger one!
+        </div>
+      </div>
+    </section>
 
-<div id="footer">
-<p>© 2025 Alpaca Adventures</p>
-</div> <!-- 14️⃣ properly closed content div -->
-</div> <!-- 15️⃣ fixed structure closing -->
+    <section id="herds" class="section light">
+      <h2>The Herd Life</h2>
+      <p>
+        Alpacas are social animals and hum to each other to communicate. They also have a leader
+        that helps keep order in the group.
+      </p>
+    </section>
+
+    <section id="fun" class="section dark">
+      <h2>Fun Facts</h2>
+      <ul>
+        <li>Alpacas can live up to 20 years.</li>
+        <li>They rarely spit at people — only other alpacas!</li>
+        <li>Each alpaca has a unique “hum” sound.</li>
+      </ul>
+    </section>
+
+    <footer id="footer">
+      <p>© 2025 Alpaca Adventures</p>
+    </footer>
+  </main>
 </body>
 </html>
